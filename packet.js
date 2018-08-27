@@ -70,6 +70,22 @@ factorial = (someNum) => {
 // Return the substring contained between offset and (offset + length) inclusively.
 // If incorrect input is entered, use the alert function and describe why the input was incorrect.
 
+substring = (someStr, length, offset) => {
+	let word = '';
+	if (offset > someStr.length || offset < 0) {
+		alert('Index incorrect.');
+		return;
+	}
+	if (length + offset > someStr.length) {
+		alert('String longer than input string');
+		return;
+	}
+	for (let i = offset; i < length + offset; i++) {
+		word += someStr[i];
+	}
+	return word;
+};
+
 // 6. Even Number
 // Define function: isEven(someNum)
 // Return true if even, false if odd.
